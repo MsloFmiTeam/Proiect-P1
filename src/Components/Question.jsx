@@ -7,13 +7,22 @@ const Question = (props) => {
             <li key = {props.id}>
                 <p>{props.question.text}</p>
                 <button 
-                    onClick = {() => {setResult(props.question.answerOne)}}
+                    onClick = {() => {
+                        setResult(props.question.answerOne)
+                        props.nextQuestion()
+                    }}
                 > Answer 1 </button>
                 <button 
-                    onClick = {() => {setResult(props.question.answerTwo)}}
+                    onClick = {() => {
+                        setResult(props.question.answerTwo)
+                        props.nextQuestion()
+                    }}
                 > Answer 2 </button>
                 <button 
-                    onClick = {() => {setResult(props.question.answerThree)}}
+                    onClick = {() => {
+                        setResult(props.question.answerThree)
+                        props.nextQuestion()
+                    }}
                 > Answer 3 </button>
             </li>
         
