@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const RefilterPage = () => {
-    let navigate= useNavigate();
+    let navigate = useNavigate();
     return (
         <div>
             Rezultate Refiltrate dupa orase
