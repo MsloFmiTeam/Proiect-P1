@@ -5,7 +5,7 @@ const RefilterPage = () => {
     let navigate= useNavigate();
     return (
         <div>
-            Rezultate Refiltrare dupa orase
+            Rezultate Refiltrate dupa orase
             <button onClick = {() => navigate("/")} >Restart</button>
         </div>
     )
