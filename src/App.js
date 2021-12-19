@@ -19,9 +19,6 @@ const App = () => {
              .then(res => setData(res.data))
              .catch("Couldn't get data")
     },[])
-
-    
-
     console.log(data)
     return (
         <div>
