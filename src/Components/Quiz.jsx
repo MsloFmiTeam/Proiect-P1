@@ -42,28 +42,22 @@ const Quiz = () => {
         }
     ];
     const displayEachQuestionById = (questions, index) => {
-          return <Question question = {questions[index]}/> 
+          return <Question question = {questions[index]} 
+                                nextQuestion = {() => {
+                                    nextQuestion !== 3 ?
+                                        setNextQuestion(nextQuestion + 1)
+                                        :
+                                        navigate("/results")
+                                    }}/> 
     }
     return (
         <div>
+            <p>Ati parcurs {nextQuestion + 1} intrebari din {questions.length}</p>
             <ul>
                 {
                     displayEachQuestionById(questions, nextQuestion)  
                 }    
             </ul>
-                
-            <button onClick = {() => {
-                nextQuestion !== 3 ?
-                    setNextQuestion(nextQuestion + 1)
-                    :
-                    navigate("/results")
-            }}>
-            {
-                nextQuestion !== 3 ? 
-                    "Urmatoarea intrebare" 
-                    :
-                    "Ultima Intrebare -> Rezultate"
-            }</button>
         </div>
     )
 }
